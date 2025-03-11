@@ -8,6 +8,7 @@
 
 - * Abstract Methods :- The methods are stated with abstract Keyword
                         and dont have any implementation only declartion.
+                        Abstract Method should have any return type.
 
 - * Concrete Methods :- The Fully Defined methods Normal Java methods with full method declarationa and Implementaion.
 
