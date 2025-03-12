@@ -6,7 +6,7 @@
                            * Concrete Methods.
                            * Static Menthos.
 
-- * Abstract Methods :- The methods are stated with abstract Keyword
+- * Abstract Methods :- The methods are stated with abstract Keyword.
                         and dont have any implementation only declartion.
                         Abstract Method should have any return type.
 
@@ -15,3 +15,4 @@
 - * Static Method    :- we can use static methods in abstract class, Static method we cannot override.
                         They are belongs to class not To instance.
                         Static Method will Provide common utilty or Helper functionality.
+                        Static Methods in abstract class can have any return type.

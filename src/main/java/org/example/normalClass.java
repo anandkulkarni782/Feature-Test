@@ -21,8 +21,9 @@ public class normalClass extends AbstractClassPOC {
 
     }
 
-    public static void main(String args[])
+    public static void main(String [] args)
     {
+        AbstractClassPOC.StaticMethod();
         normalClass nc = new normalClass();
         nc.add();
         nc.sub();

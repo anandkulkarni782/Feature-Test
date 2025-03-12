@@ -8,5 +8,14 @@ public abstract class AbstractClassPOC {
     public void display() {
         System.out.println("This is concrete method");
     }
+
+    public static void StaticMethod(){
+
+        System.out.println("This Message is Coming from static Method from Abstract Class");
+
+    }
+
+
+
 }
 
