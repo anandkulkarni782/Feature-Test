@@ -1,0 +1,55 @@
+****************************************** JAVA INTERFACE NOTES **********************************************
+An interface in Java is a blueprint that defines a contract for classes.
+It contains abstract methods (before Java 8) and can have default and static methods (from Java 8 onwards).
+
+METHODS NOT ALLOWED IN INTERFACE :-
+
+1. Constructors 🚫 Not Allowed
+   ❌ Reason:
+   Interfaces cannot have instance variables, so there’s no need for a constructor.
+   Interfaces are meant to be implemented, not instantiated.
+
+2. Final Methods 🚫 Not Allowed
+   ❌ Reason:
+   A final method cannot be overridden, but interfaces are meant to be implemented.
+
+
+3. Synchronized Methods 🚫 Not Allowed
+   ❌ Reason:
+   Interfaces do not manage state, so synchronization does not apply.
+
+
+METHODS ALLOWD :-
+
+ 1. Abstract Methods :-
+      - The primary type of method in an interface before Java 8.
+      - Public and abstract by default (even if not explicitly declared).
+      - Must be implemented by the class that implements the interfac.
+      - All type of return types are allowed.
+
+  2. DEFAULT METHOD :-
+
+      - ✅ Key Rules:
+        ✔ Must use the default keyword.
+        ✔ Can have a method body (implementation).
+        ✔ Can be overridden by implementing classes.
+        ✔ Cannot be static, final, or abstract.
+
+     - Syntax of a Default Method
+        interface MyInterface {
+            default void show() {  // Default method
+                System.out.println("This is a default method.");
+            }
+        }
+3. Static Methods :-
+     Before Java 8, static methods were not allowed in interfaces
+     because interfaces were meant only for abstraction.
+     Java 8 introduced static methods to provide helper functions inside interfaces.
+     These methods belong to the interface itself and cannot be overridden by implementing classes.
+
+
+
+* Why Are Instance Variables Not Allowed in an Interface?
+
+  ❌ In Java, interfaces cannot have instance variables (non-static fields).
+  ✅ They can only have public static final constants.

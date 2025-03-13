@@ -1,0 +1,58 @@
+********************************************* ABSTRACT - CLASS *******************************************
+
+- Abstract classes are used to define common functionality and bheaviour that can be shaired.
+- Abstract class are used to define common Functionality and behaviour that can be shaired by subclasses.
+- Abstract class in java we cannot create object of the class, methods in abstract class are meant to be subclassed.
+- Abstract class containes * Abstract Methods.
+                           * Concrete Methods.
+                           * Static Menthos.
+                           * Constructors
+
+- * Abstract Methods :- The methods are stated with abstract Keyword.
+                        and dont have any implementation only declartion.
+                        Abstract Method should have any return type.
+
+- * Concrete Methods :- The Fully Defined methods Normal Java methods with full method declarationa and Implementaion.
+
+- * Static Method    :- we can use static methods in abstract class, Static method we cannot override.
+                        They are belongs to class not To instance.
+                        Static Method will Provide common utilty or Helper functionality.
+                        Static Methods in abstract class can have any return type.
+
+
+
+- *** Scenarios where we use Abstract Class
+
+1. Use an Abstract Class When:
+
+💡 You want to provide a base class with some shared functionality.
+💡 You need to define instance variables that subclasses share.
+💡 You need constructors to initialize common fields.
+💡 You want to enforce a template pattern with default behavior.
+
+✅ Example Scenario:
+
+Real-World Example: Vehicle System
+Every vehicle has wheels, speed, and fuel type → Define in an abstract class.
+fuelType() method is abstract because different vehicles use different fuels.
+The accelerate() method is concrete because all vehicles accelerate similarly.
+
+
+
+
+Q] How Is a Constructor Allowed in an Abstract Class If It Cannot Be Instantiated?
+✅ Yes, an abstract class can have a constructor!
+
+🔹 Reason:
+While an abstract class cannot be instantiated, it can be extended by subclasses.
+The constructor of the abstract class is called when a subclass object is created,
+allowing common fields or setup to be initialized.
+
+
+
+
+* Static Constructor Not Allowed :- Java does not support static constructors (use static blocks instead)
+
+
+
+
