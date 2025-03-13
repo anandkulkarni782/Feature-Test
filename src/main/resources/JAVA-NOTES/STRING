@@ -1,0 +1,48 @@
+*******************************************JAVA-STRING****************************************************
+
+@] String :-
+
+* String in java is sequence of characters
+* Strings are immutable, Once created cannot be changed.
+
+@] Ways To Create String
+
+* There are two ways to create string in java
+
+  1] Using String Literal
+
+  String str = "Anand";
+
+  2] Using New Keyword;
+
+  String str = new String("Anand");
+
+  3] Using String Builder and String Buffer for Modification.
+
+
+@] Memory Management for Strings in Java
+
+Java handles String memory efficiently using two main areas:
+
+1️⃣ String Pool (String Constant Pool - SCP)
+
+ - Stored in the heap but separately managed by JVM.
+ - When you create a string using literals, JVM first checks if it already exists in the pool.
+ - If it exists, reference is reused (no new object is created).
+ - If it doesn’t exist, JVM creates a new object in the pool.
+
+ String s1 = "Java";
+ String s2 = "Java";  // Reuses the same object from SCP
+
+ System.out.println(s1 == s2);  // true (same reference)
+
+
+
+2️⃣ Heap Memory
+
+ - When you use new String(), JVM always creates a new object in the heap.
+ - Even if the same value exists in SCP, a separate object is made in heap memory.
+
+
+
+

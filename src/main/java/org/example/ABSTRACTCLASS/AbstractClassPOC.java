@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ABSTRACTCLASS;
 public abstract class AbstractClassPOC {
 
      int roll_Number; // Instance Variable In abstract class

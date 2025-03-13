@@ -1,4 +1,4 @@
-package org.example;
+package org.example.ABSTRACTCLASS;
 
 public class normalClassPOCabstract extends AbstractClassPOC {
 
