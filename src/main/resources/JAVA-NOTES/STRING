@@ -43,6 +43,45 @@ Java handles String memory efficiently using two main areas:
  - When you use new String(), JVM always creates a new object in the heap.
  - Even if the same value exists in SCP, a separate object is made in heap memory.
 
+ String s1 = new String("Java");  // Create on heap obj--1
+ String s2 = new String("Java");  // Create on heap obj--2
+
+ System.out.println(s1 == s2);  // false (Different objects in heap)
 
 
 
+@] String Functions :-
+
+1] length() :-   Returns string length
+
+2] concat() :-  	Joins two strings
+
+3] charAt(index) :- Gets a character at a specific position
+
+substring(start, end)	Extracts part of a string
+
+equals(str)	Compares two strings (case-sensitive)
+
+equalsIgnoreCase(str)	Compares two strings (ignores case)
+
+compareTo(str)	Compares two strings lexicographically
+
+contains(str)	Checks if a string contains a substring
+
+startsWith(str)	Checks if a string starts with a substring
+
+endsWith(str)	Checks if a string ends with a substring
+
+replace(old, new)	Replaces part of the string
+
+toUpperCase()	Converts the string to uppercase
+
+toLowerCase()	Converts the string to lowercase
+
+split(delimiter)	Splits the string into an array
+
+trim()	Removes spaces from both ends
+
+valueOf(value)	Converts other types to string
+
+intern()	Moves a string to the String Pool (SCP)
