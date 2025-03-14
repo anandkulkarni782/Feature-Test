@@ -52,36 +52,115 @@ Java handles String memory efficiently using two main areas:
 
 @] String Functions :-
 
+@] toCharArray() :- To convert String to char Array.
+
+@] ReplaceAll()
+
 1] length() :-   Returns string length
 
 2] concat() :-  	Joins two strings
 
 3] charAt(index) :- Gets a character at a specific position
 
-substring(start, end)	Extracts part of a string
+4] substring(start, end)	Extracts part of a string
 
-equals(str)	Compares two strings (case-sensitive)
+5] equals(str)	Compares two strings (case-sensitive) The equals() method in Java is used to compare two strings for content equality.
+                It checks whether two strings have the same sequence of characters.
 
-equalsIgnoreCase(str)	Compares two strings (ignores case)
+6] equalsIgnoreCase(str)	Compares two strings (ignores case)
 
-compareTo(str)	Compares two strings lexicographically
+7] compareTo(str)	Compares two strings lexicographically- Dictionary Order. It will Return True or false.
 
-contains(str)	Checks if a string contains a substring
+8] contains(str)	Checks if a string contains a substring, We have to pass substring in contains  method.
 
-startsWith(str)	Checks if a string starts with a substring
+9] startsWith(str)	Checks if a string starts with a substring
 
-endsWith(str)	Checks if a string ends with a substring
+10] endsWith(str)	Checks if a string ends with a substring
 
-replace(old, new)	Replaces part of the string
+11] replace(old, new)	Replaces part of the string
 
-toUpperCase()	Converts the string to uppercase
+12] toUpperCase()	Converts the string to uppercase
 
-toLowerCase()	Converts the string to lowercase
+13] toLowerCase()	Converts the string to lowercase
 
-split(delimiter)	Splits the string into an array
+14] split(delimiter)	Splits the string into an array
+
 
 trim()	Removes spaces from both ends
 
 valueOf(value)	Converts other types to string
 
 intern()	Moves a string to the String Pool (SCP)
+
+
+
+
+*********************************STRING BUFFER AND STRING BUILDER****************************************
+
+
+@] STRING BUFFER :-
+
+String buffer is mutable sequence of characters, Unlike string which is immutable.
+String Buffer allows modifications like append, reverse, replacing and deleting. It is threadSafe
+
+2. Why Use StringBuffer?
+Mutable – Can modify content without creating new objects.
+
+Efficient for String Manipulation – Faster than String when frequent modifications are needed.
+
+Thread-Safe – Methods are synchronized, making it safe for multi-threaded environments.
+
+
+String Buffer Methods:
+
+   1] append() :- It will modify the string and will add new string content.
+   2] insert() :- It will insert the new sting at given index.
+   3] replace() :- we need to provide index start and end  where we need to paste our string.
+   4] reverse () :- It will reverse the existing string without creating new string.
+
+public class StringBufferExample {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello");
+        sb.append(" World");
+        sb.insert(6, "Java ");
+        sb.replace(6, 10, "Everyone");
+        sb.reverse();
+        System.out.println(sb); // Output: "dlroW enoyrevE"
+    }
+}
+
+
+
+
+
+*************************************STRING-BUILDER*********************************
+
+STRING BUILDER :-
+
+StringBuilder is a mutable sequence of characters like StringBuffer,
+but it is not synchronized, making it faster than StringBuffer in single-threaded environments.
+
+
+
+2. Why Use StringBuilder?
+✅ Faster than StringBuffer (no synchronization overhead).
+✅ Efficient for string modifications (append, insert, delete, replace).
+✅ Similar to StringBuffer, but better for single-threaded use cases.
+
+public class StringBuilderExample {
+    public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append(" World");
+        sb.insert(6, "Java ");
+        sb.replace(6, 10, "Everyone");
+        sb.reverse();
+        System.out.println(sb); // Output: "dlroW enoyrevE"
+    }
+}
+
+
+
+
+
+
+
