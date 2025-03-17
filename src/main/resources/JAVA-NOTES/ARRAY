@@ -1,0 +1,12 @@
+Array :- Array in java is collection of same  type of elements, arrays are ordered.
+
+ARRAY DECLARATION :
+
+int [] arrayName;
+
+ARRAY INITIALIZATION :-
+arrayName = new int arrayName[10];
+
+ARRAY DECLARATION AND INITIALIZATION
+int [] arrayName = new int arrayName[10];
+
