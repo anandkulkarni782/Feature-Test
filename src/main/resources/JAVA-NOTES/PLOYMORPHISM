@@ -1,1 +1,72 @@
-Polymorphism means "many forms." It allows a single method or object to behave differently based on the context.
+Polymorphism
+means "many forms." It allows a single method or object to behave differently based on the context.
+
+Two Types of polymorphism
+1] run time polymorphism
+2] compile time polymorphism
+
+1] run time polymorphism :-
+   Method Overriding :-  There is method with same method name with same parametrs in base class and derived class
+   then we can call as method overloading.
+
+   * co-varient return types allowed in method overriding.
+     Example :- Int ---> Number
+   * complelity different return types not allowed
+     Example Int----> String
+
+   Rules For Method Overriding
+
+   - Same Method Signature ✅
+     The method name and parameters must be exactly the same in both the base and derived classes.
+
+   - Return Type: Same or Covariant ✅
+     The return type must be the same or a subclass (covariant return type).
+
+   - Access Modifier: Cannot Be More Restrictive ❌
+     The overriding method cannot reduce visibility.
+     Allowed: protected → public ✅
+     Not Allowed: public → private ❌
+
+   - Private, Static, and Final Methods Cannot Be Overridden
+
+     private:- methods belong to the class, not the instance.
+     static :- methods are not overridden but hidden.
+     final  :- methods cannot be changed.
+
+
+ 2] Method Overloading [ Compile Time polymorphism ]
+
+Two methods present in same class with same name and Different parameters.
+
+*  Rules for Method Overloading
+
+  - Methods Must Have the Same Name ✅
+    The method name must be identical.
+
+  - Different Number, DataType, or Order of Parameters ✅
+    Overloaded methods must differ in at least one of these:
+    Number of parameters
+    Data type of parameters
+    Order of parameters (if types are different)
+
+  - Return Type Does Not Matter ❌
+    Overloading is based only on parameters, not the return type.
+
+* Static methods can be overloaded.
+
+
+
+
+
+
+
+
+Q] Why static method cannot override ?
+Ans :- In Java, static methods belong to the class rather than instances (objects).
+       Since method overriding is based on runtime polymorphism (dynamic binding),
+       static methods cannot be overridden because they are resolved at compile time (static binding).
+
+Q] Why Static methods we are able to overload ?
+Ans :-  Static methods can be overloaded because method overloading is based on compile-time (static) polymorphism.
+        The compiler determines which method to call based on method signatures (number, type, or order of parameters),
+        regardless of whether the methods are static or non-static.
