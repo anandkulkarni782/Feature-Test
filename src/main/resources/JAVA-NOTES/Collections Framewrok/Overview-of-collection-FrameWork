@@ -1,0 +1,37 @@
+**  What is Collection Framework ?
+   - Collection<T> is the root interface of the Java Collections Framework.
+   - It extends Iterable<T>, meaning all collections can be iterated using Iterator or forEach().
+   - Implemented by: List, Set, and Queue.
+
+   java.lang.Iterable<T>
+      ├── java.util.Collection<T>  (Main Interface)
+      │      ├── List<T>    (Ordered, allows duplicates)
+      │      ├── Set<T>     (Unordered, unique elements)
+      │      ├── Queue<T>   (FIFO, used for processing)
+      └── java.util.Map<K, V>  (Key-value pairs, NOT part of Collection)
+
+
+3. Key Features of Collection<T>
+✅ Supports storing multiple objects dynamically.
+✅ Includes basic operations like add(), remove(), contains(), size(), etc.
+✅ Allows conversion to arrays using toArray().
+✅ Supports iteration via Iterator and forEach().
+
+
+EXAMPLE :-
+
+Public Class collectionsInterface{
+
+Collection<String> collectionFramework = new ArrayList<>();
+
+CollectionFramework.add("Anand");
+CollectionFramework.add("Kulkarni");
+
+CollectionFramework.forEach(printname -> System.out.println(printname));
+
+}
+
+
+
+
+

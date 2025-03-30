@@ -1,0 +1,55 @@
+*********SET-INTERFACE***********
+
+- Set interface is part of java collection framework
+- Set Interface doesnot allowed duplicate values.
+- Does not Maintain Insertion order Except - LinkedHashSet Class
+
+java.lang.Iterable<E>
+   └── java.util.Collection<E>
+       └── java.util.Set<E>        // Set Interface
+           ├── HashSet<E>         // Unordered, fast lookup
+           ├── LinkedHashSet<E>   // Ordered, maintains insertion order
+           ├── TreeSet<E>         // Sorted, uses Red-Black tree
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------
+
+HashSet<>();
+___________
+
+- HashSet class Implements SET Interface
+
+KeyFeatures of SET Interface :
+
+✅ No duplicate elements allowed.
+✅ Unordered [ Doses not maintain insertion order ]
+✅ Allows Only ONE Null Value
+✅ Uses HashMap Internally
+
+📌 Internal Working of HashSet
+When you create a HashSet, it actually creates an empty HashMap internally
+and stores each element as a key in that HashMap, using a dummy value (PRESENT).
+
+HashSet<String> set = new HashSet<>();
+set.add("Anand");
+set.add("Kulkarni");
+
+// Internally, it is stored as:
+HashMap<String, Object> map = new HashMap<>();
+map.put("Anand", PRESENT);
+map.put("Kulkarni", PRESENT);
+
+
+Here, PRESENT is a dummy placeholder used internally by Java’s HashSet implementation.
+
+
+---------------------------------------------------------------------------------------------
+
+
+
+

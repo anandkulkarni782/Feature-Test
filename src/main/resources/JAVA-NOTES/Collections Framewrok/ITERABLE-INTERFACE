@@ -1,0 +1,12 @@
+What is Iterable ?
+
+Ans :- Iterable is root interface for collections framework
+     - It was introduced in Java 5
+     - It is present in java.lang package.
+     - Collection extends Iterable Interface, so all its subtypes inherit iteration capability.
+     - ✅ Allows iteration using Iterator and for-each loop.
+
+     Public class Iterator{
+      List<String> Names = Arrays.asList("Anand", "Kulkarni", "Java");
+      Names.forEach(name -> System.out.println(name));
+      } // For Each loop Iteration.
