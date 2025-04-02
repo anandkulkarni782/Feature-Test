@@ -47,8 +47,90 @@ map.put("Kulkarni", PRESENT);
 
 Here, PRESENT is a dummy placeholder used internally by Java’s HashSet implementation.
 
+2️⃣ What is the default capacity of HashSet?
+✔️ HashSet internally uses a HashMap with a default initial capacity of 16 and a load factor of 0.75.
+
+3️⃣ What happens when we add a duplicate element in HashSet?
+✔️ It gets ignored because HashSet checks for duplicates using HashMap.containsKey().
+4️⃣ Can HashSet store null values?
+✔️ Yes, HashSet allows one null value because HashMap allows one null key.
+5️⃣ Why is HashSet unordered?
+✔️ Because it uses hashing, and hash functions do not maintain order.
+
+
+✅ HashSet uses a HashMap internally, storing elements as keys and using a dummy value (PRESENT).
+✅ No duplicates allowed (because HashMap does not allow duplicate keys).
+✅ Unordered storage due to hashing.
+✅ Fast performance (O(1) for add, remove, contains).
+✅ Allows null, but only one.
 
 ---------------------------------------------------------------------------------------------
+
+
+** LinkedHashSet<>();
+
+- LinkedHashSet is a child class of HashSet and maintains insertion order.
+- It is implemented using a combination of HashMap and Doubly Linked List internally.
+
+java.lang.Object
+ └── java.util.Collection<E>
+     └── java.util.Set<E>
+         └── java.util.HashSet<E>
+             └── java.util.LinkedHashSet<E>
+
+
+
+2️⃣ Key Features
+✅ Maintains insertion order (unlike HashSet).
+✅ Does not allow duplicate elements.
+✅ It Allows Only one Null Value.
+✅ Uses a doubly linked list along with HashMap for internal storage.
+✅ Better iteration performance than HashSet (since it maintains order).
+✅ Not thread-safe (like all standard collection classes).
+
+
+5️⃣ When to Use LinkedHashSet?
+✅ When you need a Set that preserves insertion order.
+✅ When you require fast lookups (O(1) time complexity like HashSet).
+✅ When iteration speed matters (since it’s faster than HashSet for iteration).
+
+
+
+
+
+
+6️⃣ Difference Between HashSet and LinkedHashSet
+Feature   	              HashSet	                        LinkedHashSet
+Ordering	              No insertion order	            Maintains insertion order
+Performance	              Faster for inserts/deletes	    Slightly slower (due to linked list overhead)
+Internal Structure	      HashMap	                        LinkedHashMap (HashMap + Doubly Linked List)
+
+
+-------------------------------------------------------------------------------------
+
+
+** TreeSet<>();
+
+- TreeSet is the class which implements the NavigableSet Interface which extends sortedSet Interface.
+
+TreeSet[Class]---Implements-->NavigableSet[Interface]--->Extends--->SortedSet[Interface]--Extends--->Set[Interface]
+
+- Tree set stores elements in ascending order.
+- Duplicates not allowed
+- Null values are Not allowed.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,143 @@
+- Queue Interface in java is present in java.util package.
+- It extends the Collection interface
+  and provides methods for inserting, removing, and inspecting elements in a queue.
+- If Follows FIFO - First-In-First-Out Approach.
+- Supports insertion at the rear and deletion from the front.
+
+
+- offer(E e): Adds an element to the queue. It returns true if the element was successfully added,
+              or false if the queue is full
+
+- poll(): Retrieves and removes the front element of the queue. If the queue is empty, it returns null
+
+- peek(): Retrieves but does not remove the front element of the queue.
+          If the queue is empty, it returns null.
+
+- remove(): Removes and returns the front element.
+            Throws an exception (NoSuchElementException) if the queue is empty.
+
+- isEmpty(): Checks if the queue is empty.
+
+- size(): Returns the number of elements in the queue.
+
+- element(): Retrieves but does not remove the front element of the queue. Throws an exception (NoSuchElementException) if the queue is empty.
+
+[ peek() and element() are same but usecase of Exception Handling is Different ]
+
+[ poll() and remove() are same but Uscase of Exception Handling is different ]
+
+
+
+         java.util.Collection (Interface)
+                 │
+              Queue<E> (Interface)
+      ┌───────────────────────────────┐
+  Deque<E> (Interface)        BlockingQueue<E> (Interface)
+      │                                   │
+ ┌────┴────┐                   ┌──────────────────────────┐
+ |         |                   |                          |
+ArrayDeque  LinkedList     LinkedBlockingQueue  PriorityBlockingQueue
+(Class)     (Class)           (Class)               (Class)
+
+
+
+import java.util.ArrayDeque;
+import java.util.Queue;
+
+public class ArrayDequeQueueExample {
+    public static void main(String[] args) {
+        Queue<String> queue = new ArrayDeque<>();
+
+        queue.offer("X");
+        queue.offer("Y");
+        queue.offer("Z");
+
+        System.out.println("ArrayDeque Queue: " + queue);  // Output: [X, Y, Z]
+
+        System.out.println("Poll: " + queue.poll());  // Output: X
+        System.out.println("Queue after poll: " + queue);  // Output: [Y, Z]
+    }
+}
+
+
+
+
+------------------------------------------------------------------------------------------
+
+
+Deque (Double-Ended Queue) :-
+
+
+A Deque (short for "double-ended queue") is a data structure that allows insertion and deletion from both ends.
+Java provides the Deque interface under the java.util package, and it is implemented by classes like:
+
+ArrayDeque (preferred for performance)
+LinkedList (provides List-like flexibility)
+
+1. Key Features of Deque -
+
+- Insertion and deletion from both ends
+- No Capacity Restrictions: Unlike Stack or Queue, a Deque can grow dynamically.
+
+
+3. Important Methods in Deque
+
+Method	                 Description
+addFirst(E e)	   Inserts element at the front, throws exception if full.
+addLast(E e)	   Inserts element at the rear, throws exception if full.
+offerFirst(E e)	   Inserts element at the front, returns true/false if full.
+offerLast(E e)	   Inserts element at the rear, returns true/false if full.
+pollFirst()	       Removes and returns the first element, returns null if empty.
+pollLast()	       Removes and returns the last element, returns null if empty.
+peekFirst()	       Retrieves but does not remove the first element.
+peekLast()	       Retrieves but does not remove the last element.
+removeFirst()	   Removes and returns the first element, throws exception if empty.
+removeLast()	   Removes and returns the last element, throws exception if empty.
+
+
+
+import java.util.Deque;
+import java.util.ArrayDeque;
+
+public class DequeExample {
+    public static void main(String[] args) {
+        Deque<Integer> deque = new ArrayDeque<>();
+
+        // Adding elements at both ends
+        deque.addFirst(10); // Front
+        deque.addLast(20);  // Rear
+        deque.addFirst(5);  // Front
+        deque.addLast(25);  // Rear
+
+        System.out.println("Deque: " + deque); // [5, 10, 20, 25]
+
+        // Removing elements from both ends
+        System.out.println("Removed First: " + deque.removeFirst()); // 5
+        System.out.println("Removed Last: " + deque.removeLast());   // 25
+
+        System.out.println("Deque after removals: " + deque); // [10, 20]
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+BlockingQueue<E> :-
+
+A BlockingQueue is a thread-safe queue designed for use in multithreading environments,
+particularly when dealing with the producer-consumer problem.
+
+Key Characteristics:
+
+
+
+
+
+
+
+
+
+
+
+
+

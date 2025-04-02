@@ -1,0 +1,65 @@
+** Map Interface :-
+
+java.util
+ ├── Collection (Interface)
+ │    ├── List (Interface)
+ │    ├── Set (Interface)
+ │    └── Queue (Interface)
+ └── Map (Interface)
+       ├── HashMap (Class)
+       ├── LinkedHashMap (Class)
+       ├── TreeMap (Class)
+       └── Hashtable (Class)
+
+
+Actually,Map is part of the Java Collections Framework,but it is not considered a direct Collection.Here’s why:
+
+The Collection interface is the root of the collection hierarchy for storing individual objects.
+Map is part of the java.util package, but it does not extend Collection. Instead,
+it is a separate interface used for key-value pair mappings.
+
+Key Points about Map:
+
+- Key-Value Structure: Each key maps to exactly one value.
+- Unique Keys: A map cannot have duplicate keys, but it can have duplicate values.
+
+----------------------------------------------------------------------------------------------------
+
+** HashMap :-
+
+- Non-synchronized and unordered map.
+- A HashMap is a part of the java.util package.
+  It provides key-value pair storage with efficient lookup, insertion, and deletion operations.
+
+-  Key Features of HashMap :-
+
+* Stores key-value pairs: You store values in the map with a unique key for each value.
+* Allows null values and one null key: You can have a null key and null values in the map.
+* Unordered: HashMap does not guarantee the order of the entries. The order can change when the map is resized.
+* Not thread-safe
+
+
+🔹 How HashMap Works Internally
+
+1] Hashing:
+- When you add an entry to the HashMap,the key is passed through a hashing function to generate a hash code.
+- This hash code determines the bucket (array index) where the key-value pair is stored.
+
+2] Collision Handling:
+- If two keys hash to the same index (i.e., hash collision),
+  the HashMap stores the entries in a linked list or a Red-Black Tree (since Java 8) to handle the collision.
+
+3] Resizing:
+- When the number of entries exceeds a threshold (based on the load factor, default is 0.75),
+  the HashMap grows by doubling its capacity and rehashing the entries.
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
