@@ -1,0 +1,85 @@
+Q] What is a Stream ?
+Ans :-
+  - Java Provides new additional package in java 8 called java.util.stream.
+  - stream API perform bulk operation and process objects of collection
+  - Main Advantage of stream is to reduce the length of code.
+
+
+* Various Core Operations Over Streams :
+
+✅ Intermediate Operations  :-
+
+ Intermediate operations are operations that transform a stream into another stream.
+ These operations don’t produce a result immediately — instead, they build a pipeline of operations that are executed only when a terminal operation is invoked.
+
+
+
+Key Characteristics:
+Return Type: Always return a new Stream.
+
+Lazy Evaluation: They are lazy — no processing occurs until a terminal operation is called.
+
+Chainable: Multiple intermediate operations can be chained together to form complex data processing pipelines.
+
+
+
+🔍 Filtering
+Method	                             Description
+filter(Predicate<T> predicate)	     Filters elements based on a condition.
+
+distinct()	                         Removes duplicate elements (based on equals).
+
+---------------------------------------------------------------------------------------------------
+
+
+🔄 Mapping (Transformation)
+Method	                                   Description
+map(Function<T, R> mapper)	                        Transforms each element into another using a function.
+
+mapToInt(ToIntFunction<T> mapper)	                Maps elements to an IntStream.
+
+mapToLong(ToLongFunction<T>mapper)	                Maps elements to a LongStream.
+
+mapToDouble(ToDoubleFunction<T> mapper)	            Maps elements to a DoubleStream.
+
+flatMap(Function<T, Stream<R>> mapper)	            Flattens nested streams.
+
+flatMapToInt(Function<T, IntStream> mapper)	        Flattens to IntStream.
+
+flatMapToLong(Function<T, LongStream> mapper)	    Flattens to LongStream.
+
+flatMapToDouble(Function<T, DoubleStream> mapper)	Flattens to DoubleStream.
+
+
+--------------------------------------------------------------------------------------------
+
+📐 Sorting
+Method	                                 Description
+sorted()	                             Sorts elements in natural order.
+
+sorted(Comparator<T> comparator)	     Sorts using a custom comparator.
+
+--------------------------------------------------------------------------------------------
+
+🧪 Peeking
+
+Method	                       Description
+peek(Consumer<T> action)	   Performs an action on each element (usually for debugging).
+
+
+------------------------------------------------------------------------------------------
+
+🎯 Type Conversion (for primitives)
+
+Method	                        Description
+boxed()                        	Converts a primitive stream (IntStream, etc.) to an object stream.
+asLongStream()	                Converts IntStream to LongStream (available on IntStream).
+asDoubleStream()	            Converts IntStream to DoubleStream (available on IntStream).
+
+
+------------------------------------------------------------------------------------------
+
+
+✅ Terminal Operations in Java Streams
+
+

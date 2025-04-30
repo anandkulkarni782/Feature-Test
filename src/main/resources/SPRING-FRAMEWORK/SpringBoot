@@ -1,0 +1,76 @@
+What is SpringBoot ..?
+
+Spring Boot is a Java framework that helps you build stand-alone, production-ready applications very quickly,
+without writing a lot of configuration.
+
+Main points about Spring Boot:
+
+- No XML configuration needed (almost everything is done with annotations).
+- Embedded servers (Tomcat, Jetty, etc.) — no need to deploy separately.
+- Auto-configuration — it guesses and sets up most things for you.
+- Production-ready features like health checks, metrics, etc.
+- Easy to create REST APIs, web apps, or microservices.
+
+
+
+** Internal Working of @SpringBootApplication  Annotation
+---> It is combination of three annotations
+1] @configuration
+2] @EnableAutoConfiguration
+3] @ComponentScan --- It will scan The classes which marked as @Component @Service etc.
+- It is starting Point of SpringBootApplication
+
+------------------------------------------------------------------------------------------
+
+Note : ALl the Methods in controller class are should be public so it should be accessible to spring framework
+
+
+
+REST-API In springBoot.
+REST- Representational State Transfer.
+
+Controllers :- Special type of components which handles http requests.
+
+Difference between @Controller and @RestController
+@Controller :-
+   - Used to build web applications (like returning HTML pages).
+   - Returns views (like JSP, Thymeleaf templates) after processing data.
+   - Needs @ResponseBody if you want to return JSON or data instead of a view.
+   -
+@RestController [ @Controller + @ResponseBody ]
+   - Used to build REST APIs (returning JSON or XML).
+   - Directly returns data (usually JSON) to the client.
+   - Automatically adds @ResponseBody to all methods — no extra annotation needed.
+
+
+   In short:
+   @Controller = for web pages (HTML/Thymeleaf etc.).
+
+   @RestController = for APIs (JSON/XML responses).
+
+Example :-
+
+   @Controller
+   public class HomeController {
+       @GetMapping("/home")
+       public String homePage() {
+           return "home"; // looks for a file like home.html or home.jsp
+       }
+   }
+
+@RestController
+public class ApiController {
+    @GetMapping("/api/home")
+    public String homeApi() {
+        return "Hello from API"; // directly returns "Hello from API" as plain text or JSON
+    }
+}
+
+-------------------------------------------------------------------------------------------------------
+
+@RequestMapping("/abc") :-  @RequestMapping is used to map HTTP requests (like GET, POST) to Java methods or classes in Spring Boot.
+                            It can be used at the class level and/or the method level.
+
+
+
+@RequestBody() :- Need to take data from request and turn it down as java object.

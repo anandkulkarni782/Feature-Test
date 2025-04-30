@@ -37,7 +37,7 @@ Key Points about Map:
 * Allows null values and one null key: You can have a null key and null values in the map.
 * Unordered: HashMap does not guarantee the order of the entries. The order can change when the map is resized.
 * Not thread-safe
-
+* In a Java HashMap, duplicate keys are not allowed, but duplicate values are allowed.
 
 🔹 How HashMap Works Internally
 
@@ -55,11 +55,70 @@ Key Points about Map:
 
 
 
+Example Of HashMap
+
+import java.util.HashMap;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+
+        // Adding key-value pairs
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Apple"); // Duplicate value is allowed
+        map.put(2, "Mango"); // Key 2 is updated with "Mango"
+
+        System.out.println(map);
+    }
+}
+
+
 -------------------------------------------------------------------------------------------------------
 
+LinkedHashMap :-
+
+- A LinkedHashMap is similar to a HashMap, but it maintains the insertion order of elements.
+
+Key Features of LinkedHashMap:
+
+Duplicates:
+Keys: ❌ No duplicate keys allowed (same as HashMap).
+
+Values: ✅ Duplicate values are allowed.
+
+Order: Maintains the insertion order of elements.
+
+Performance: Slightly slower than HashMap due to ordering maintenance.
+
+Nulls: ✅ Allows one null key and multiple null values.
 
 
 
+
+import java.util.LinkedHashMap;
+
+public class LinkedHashMapExample {
+    public static void main(String[] args) {
+        LinkedHashMap<Integer, String> map = new LinkedHashMap<>();
+
+        // Adding key-value pairs
+        map.put(1, "Apple");
+        map.put(2, "Banana");
+        map.put(3, "Apple"); // Duplicate value is allowed
+        map.put(2, "Mango"); // Overwrites key 2
+        map.put(null, "Orange"); // One null key allowed
+        map.put(4, null); // Null value allowed
+        map.put(5, null); // Multiple null values allowed
+
+        // Printing the LinkedHashMap
+        System.out.println(map);
+    }
+}
+
+---------------------------------------------------------------------------------------------
+
+TreeMap :-
 
 
 

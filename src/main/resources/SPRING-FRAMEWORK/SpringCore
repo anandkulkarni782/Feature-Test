@@ -1,0 +1,134 @@
+Topic Need To Study :-
+
+1] Introduction to Spring Framework
+
+2] Dependency Injection (DI)
+
+3] Spring Configuration
+
+4] Component Scanning & Stereotype Annotations
+
+What is dependency Injection And IOC.
+Ans :-
+"Dependency Injection is a design pattern that helps achieve loose coupling between components by injecting dependencies rather than creating them manually.
+In Spring, the process of managing these dependencies—like object creation and wiring—is handled by the IoC (Inversion of Control) container."
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+1] Introduction to Spring Framework
+
+Q] What is Spring Framework?
+
+- Spring Is dependency injection framework to make java application loosely coupled.
+- Spring Make Easy Application development of Java j2EE application
+
+
+-----------------------------------------------------------------------------------------
+
+2] Dependency Injection (DI)
+
+Q] What is dependency Injection.
+- It is design Pattern.
+- As Java application is build using multiple classes and Dependency. i.e One class is depend on other class.
+  For example
+  Class A {
+            public void Work{}
+          }
+   Class B {
+            A obj;
+            public void DoWork{}
+            }
+
+Class B is depend on Class A, in Legecy System We are manaually creating this object and passing it,
+Now dependency Injection Will handle it.
+
+
+Q] What is IOC container
+
+Ans :-  IOC container responsible for creating objects, holding them in memory and injecting them if necessary,
+        It will maintain the lifecycle of objects.
+        It is predefined program, 
+
+        We need to Provide two Things to IOC container
+        1] Beans Or Classes
+        2] Configuration - We need to Mention which Bean is dependent on another bean.
+
+
+Q] Who Represents IOC Container
+
+- ApplicationContext Interface Represents IOC container.
+- ApplicationContext Extends BeanFactory. It has Additional Things from BeanFactory.
+- Three classes Extends Application Context Interface
+   - ClassPathXmlApplicationContext
+   - AnnotationConfigApplicationContext
+   - FileSystemXmlApplicationContext
+
+
+
+Q] What are the ways to do Dependency Injection
+
+1] Constructor Injection.
+2] Setter Injection.
+
+
+-------------------------------------------------------------------------------------
+
+** Autowiring In Spring
+
+- Autowiring in spring is feature in spring to inject the object dependencies automatically.
+- It is not working for primitive types and strings it will work only with Object Types.
+- Autowiring we can done using two ways
+  1] xmlConfig :- autowiring Modes
+     - ByName
+     - Type
+     - Constructor
+
+  2] Annotation
+     - @Autowired
+     - @Qualifier
+
+
+
+------------------------------------------------------------------------------------
+
+Stereotype Annotation
+
+@Component :- this is class level annotation, It will tell spring we need to create object of this class
+           :- It will follow CamaleCase Object creation i.e If class Name Is Anand it will create object as anand
+              we can give implicit name at time of declaration @Component("ak") object will represent as ak now
+
+@Value :-we can add Values to Variables implicitly using @Value Annotation.
+
+
+@Scope :- Used to define the scope of bean, i.e how many instances of bean should be created and how long they should alive.
+Types :- * singleton(default) :  only one instance per SpringContainer
+         * prototype : A new Instance Everytime bean is required
+         * request : One instance per HTTP request ( Only for webapps )
+
+@Configuration :- It tells Spring that the class can be used by the Spring IoC container as a source of bean definitions.
+
+@ComponentScan(base Package = ):-
+
+
+@Bean :-  is a Spring annotation used inside a class annotated with @Configuration.
+It tells Spring that the method will return an object that should be registered as a Spring Bean in the application context.
+
+
+See if we are using @bean annotation in @configuration class, There we are explicitly returning bean, we can remove
+@component form the class that we want to create bean and @componentScan as well
+
+i.e it is another way of telling spring that this class object we needed.
+
+
+
+
+
+
+
+
+
+
+
+
