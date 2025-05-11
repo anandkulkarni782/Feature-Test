@@ -74,3 +74,9 @@ public class ApiController {
 
 
 @RequestBody() :- Need to take data from request and turn it down as java object.
+
+
+@RequestParam()
+
+
+@PathVariable()
