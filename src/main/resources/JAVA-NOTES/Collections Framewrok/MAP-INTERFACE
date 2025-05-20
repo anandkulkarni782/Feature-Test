@@ -23,7 +23,7 @@ Key Points about Map:
 - Key-Value Structure: Each key maps to exactly one value.
 - Unique Keys: A map cannot have duplicate keys, but it can have duplicate values.
 
-----------------------------------------------------------------------------------------------------
+-------------------   ---------------------------------------------------------------------------------
 
 ** HashMap :-
 

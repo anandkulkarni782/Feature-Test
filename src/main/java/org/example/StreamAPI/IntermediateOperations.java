@@ -1,5 +1,6 @@
 package org.example.StreamAPI;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,10 +10,18 @@ public class IntermediateOperations {
         names.stream().filter(name -> name.startsWith("A")).forEach(name -> System.out.println(name));
 
 
-        List<Integer> Numbers = List.of(10,20,30,40,50,60,70,80,90);
-        Numbers.stream().sorted().forEach(System.out::println);
-        // by default assending order
+        List<Integer> numbers = Arrays.asList(1,3,2,7,9,8);
+        numbers.stream().sorted().forEach(n -> System.out.println(n));
+        System.out.println("\n");
+        numbers.stream().sorted(Comparator.reverseOrder()).forEach(n-> System.out.println(+n));
 
-        Numbers.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+
+        List<String>name = List.of("anand","anagha","amruta");
+        name.stream().map(n -> n.toUpperCase()).forEach(n -> System.out.println(n));
+
+
+        List<String> sentences = List.of("hello world", "java streams");
+
+
     }
 }
