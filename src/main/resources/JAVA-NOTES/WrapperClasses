@@ -1,0 +1,36 @@
+1] What are wrapper classes ?
+
+Ans :- Wrapper class in java is object representation of primitive data types,
+       They allowed primitive data types to be treated as objects,
+       There are eight wrapper classes corresponding to Eight primitive data types
+       they are present in java.lang package.
+
+Sr   Wrapper-Class    Data-Type
+1]   Integer          int
+2]   Double           double
+3]   Long             long
+4]   Short            short
+5]   Character        char
+6]   Boolean          boolean
+7]   Float            float
+8]   Byte             byte
+
+
+2] Why do we need Wrapper classes
+Ans :- Collections like arrayList Only Stores Objects, Nullability,
+       Primitive cannot store null values,
+       Generics cannot deal with primitive data types.
+
+-----------------------------------------------------------------------------
+
+* Autoboxing :- Automatically converting primitive to its corresponding wrapper class
+ Example :- int x= 101;
+            Integer obj = x// Autoboxing Java Takes care in background
+
+* Unboxing :- Unboxing automatic conversion of Wrapper class object to its primitive data type.
+
+          Integer obj = Integer.valueOf(100); // Wrapper object
+          int x = obj; // ✅ Unboxing: Integer → int
+          System.out.println("Primitive int: " + x);
+
+---------------------------------------------------------------------------
